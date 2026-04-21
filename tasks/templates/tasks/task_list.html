@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Tasks</title>
+</head>
+<body>
+    <h1>My Task List</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task.title }} - {{ task.status }}</li>
+        {% empty %}
+            <li>No tasks yet! Add some in the Admin panel.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

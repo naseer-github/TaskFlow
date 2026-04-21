@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=taskflow_db
+      - POSTGRES_USER=naseer
+      - POSTGRES_PASSWORD=pass
+    ports:
+      - "5433:5432"
+
+volumes:
+  postgres_data:
